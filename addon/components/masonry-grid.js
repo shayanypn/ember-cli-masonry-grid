@@ -102,8 +102,8 @@ export default Ember.Component.extend({
 	},
 
 	_computeOptions() {
-		let options = 
-			this.get('config') ? this.get('config') : this.getProperties( MASONRY_OPTION_KEYS);
+		let self = this,
+		options = this.get('config') ? this.get('config') : this.getProperties( MASONRY_OPTION_KEYS);
 
 
 		Object.keys(options).forEach((key) => {
