@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-masonry-grid",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": " An ember-cli addon that allows you to quickly, easily and powerfully build masonry grid views.",
   "keywords": [
     "ember-cli",
