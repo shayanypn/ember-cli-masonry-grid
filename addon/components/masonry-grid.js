@@ -59,16 +59,6 @@ export default Ember.Component.extend({
 		Ember.run.debounce( this, this._layoutMasonry , 80 );
 	},
 
-	// didUpdateAttrs(attrsObj) {
-	// 	this._super(...arguments);
-	// 	const shouldRebuild = MASONRY_OPTION_KEYS.any((option) => {
-	// 		return (attrsObj.newAttrs[option] !== attrsObj.oldAttrs[option]);
-	// 	});
-	// 	if (shouldRebuild) {
-	// 		this._destroyMasonry();
-	// 	}
-	// },
-
 	didRender() {
 		let self = this;
 		if (this.isDestroyed) {
@@ -95,7 +85,7 @@ export default Ember.Component.extend({
 					);
 
 					masonry.on('layoutComplete', (layout) => {
-						this.sendAction('onLayoutComplete', layout);
+						this.sendAction('layoutComplete', layout);
 					});
 					this.set('masonry', masonry );
 				}
@@ -126,24 +116,53 @@ export default Ember.Component.extend({
 			}
 		});
 
+
+		Ember.set( options  , 'methods' , {
+			reloadItems(){
+				self._reloadItems();
+			},
+			destroy(){
+				self._destroyMasonry();
+			},
+			layout(){
+				self._layoutMasonry();
+			},
+			getItemElements(){
+				const masonry = self.get('masonry');
+				return masonry ? masonry.getItemElements() : [];
+			},
+			masonry(){
+				self.didRender();
+			}
+		});
+
+		Ember.set( options , 'getMasonry' , function(){
+			const masonry = self.get('masonry');
+			return masonry;
+		});
+
+
 		return options;
 	},
 
 
+
 	_destroyMasonry() {
-
 		const masonry = this.get('masonry');
-
 		if (masonry) {
 			masonry.destroy();
 		}
-
 		this.set('masonry', undefined);
 	},
 
+	_reloadItems(){
+		const masonry = this.get('masonry');
+		if ( masonry ) {
+			masonry.reloadItems();
+		}
+	},
 
 	_layoutMasonry(){
-
 		const masonry = this.get('masonry');
 		if ( masonry ) {
 			masonry.layout();
