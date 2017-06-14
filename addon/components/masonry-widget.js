@@ -11,7 +11,6 @@ export default Ember.Component.extend({
 	itemClass: Ember.computed('item.masonry.classname', function() {
 		let _classname = '';
 		if ( this.get('item.masonry.classname') ) {
-			_classname += this.get('grid.itemClass');
 			_classname += this.get('item.masonry.classname');
 		}else{
 			_classname += this.get('grid.itemClass');
@@ -31,18 +30,25 @@ export default Ember.Component.extend({
 		}
 	}),
 
-	// isStamped: function () {
-	// 	let stamp = this.get('item.masonry.stamp'),
-	// 		$grid = this.get('grid.masonry');
-	// 	if ( stamp === true ) {
-	// 		$grid.stamp(this.getElement() );
-	// 		$grid.layout();
-	// 	}else if( stamp === false ){
-	// 		$grid.unstamp( this.getElement() );
-	// 		$grid.layout();
-	// 	}	
-	// }.observes('item.masonry.stamp').on('init'),
+	init(){
+		this._super(...arguments);
 
+		this.addObserver('item.masonry.stamp', this, 'onStamp');
+	},
+
+
+	onStamp(){
+		let stamp = this.get('item.masonry.stamp'),
+		$grid = this.get('grid.masonry');
+		
+		if ( stamp === true ) {
+			$grid.stamp(this.getElement() );
+			$grid.layout();
+		}else if( stamp === false ){
+			$grid.unstamp( this.getElement() );
+			$grid.layout();
+		}	
+	},
 
 	getElement(){
 		return document.getElementById( this.get('masonryItemId') );

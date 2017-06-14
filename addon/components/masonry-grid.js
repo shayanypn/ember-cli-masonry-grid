@@ -144,9 +144,7 @@ export default Ember.Component.extend({
 
 		return options;
 	},
-
-
-
+	
 	_destroyMasonry() {
 		const masonry = this.get('masonry');
 		if (masonry) {

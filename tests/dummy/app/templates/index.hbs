@@ -1,0 +1,22 @@
+
+<button {{action 'onAppend'}}> Append Item</button>
+<button {{action 'onPrepend'}}> Prepend Item</button>
+<button {{action 'onDeleteLast'}}> Delete Last Item</button>
+<button {{action 'onStamp' 'one'}}>Toggle Stamp One</button>
+<button {{action 'onStamp' 'two'}}>Toggle Stamp Two</button>
+ 
+
+{{#masonry-grid 
+	config=options
+	widgets=items as |item index grid|}}
+
+	{{item.name}} <br />
+	{{#if item.isStamp}}
+	{{else}}
+		<button {{action 'onItemDelete' index }} >delete</button>
+		<button {{action 'onItemToggle' index }} >toggle</button>
+	{{/if}}
+{{/masonry-grid}}
+
+
+{{outlet}}
