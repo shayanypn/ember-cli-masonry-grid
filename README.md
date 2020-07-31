@@ -1,7 +1,12 @@
+
 # ember-cli-masonry-grid
 
 This `ember-cli` addon imports the Masonry library and allows you to quickly, easily and powerfully  build masonry grid views.
 [***Demo***](http://ember-masonry.shayanypn.ir/)
+
+
+![screen record of preview](https://github.com/shayanypn/ember-cli-masonry-grid/blob/master/preview.png)
+
 
 ## Installation
 `ember install ember-cli-masonry-grid`
@@ -96,5 +101,3 @@ If you find an issue or missing functionality, please don't hesistate to open a 
 * `ember build`
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
-
-
