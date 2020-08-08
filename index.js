@@ -1,16 +1,10 @@
-/* eslint-env node */
 'use strict';
 
 module.exports = {
-	name: 'ember-cli-masonry-grid',
-	isDevelopingAddon: function() {
-		return true;
-	},
-	included: function(app) {
-		this._super.included.apply(this, arguments);
+  name: require('./package').name,
 
-		app.import(app.bowerDirectory + '/masonry/dist/masonry.pkgd.min.js');
-
-		app.import(app.bowerDirectory + '/imagesloaded/imagesloaded.pkgd.min.js');
-	}
+  included() {
+    this._super.included.apply(this, arguments);
+    this.import('node_modules/masonry-layout/dist/masonry.pkgd.min.js');
+  },
 };

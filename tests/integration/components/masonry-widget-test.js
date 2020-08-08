@@ -1,25 +1,26 @@
-import { moduleForComponent, test } from 'ember-qunit';
-import hbs from 'htmlbars-inline-precompile';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
+import { hbs } from 'ember-cli-htmlbars';
 
-moduleForComponent('masonry-widget', 'Integration | Component | masonry widget', {
-  integration: true
-});
+module('Integration | Component | masonry-widget', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
+  test('it renders', async function(assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.set('myAction', function(val) { ... });
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+    await render(hbs`<MasonryWidget />`);
 
-  this.render(hbs`{{masonry-widget}}`);
+    assert.equal(this.element.textContent.trim(), '');
 
-  assert.equal(this.$().text().trim(), '');
+    // Template block usage:
+    await render(hbs`
+      <MasonryWidget>
+        template block text
+      </MasonryWidget>
+    `);
 
-  // Template block usage:
-  this.render(hbs`
-    {{#masonry-widget}}
-      template block text
-    {{/masonry-widget}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), 'template block text');
+  });
 });
