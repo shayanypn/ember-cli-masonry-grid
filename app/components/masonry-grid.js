@@ -1,1 +1,0 @@
-export { default } from 'ember-cli-masonry-grid/components/masonry-grid';

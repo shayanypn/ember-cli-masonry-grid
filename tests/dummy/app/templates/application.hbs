@@ -1,6 +1,19 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{!-- {{welcome-page}} --}}
-{{!-- Feel free to remove this! --}}
-
+<h2 id="title">Welcome to Ember</h2>
 
 {{outlet}}
+
+<Masonrygrid
+  class="grid-container"
+  style="width:320px;"
+  @columnWidth=100
+  @gutter=5
+>
+  <Masonrygrid::Widget>1</Masonrygrid::Widget>
+  <Masonrygrid::Widget>2</Masonrygrid::Widget>
+  <Masonrygrid::Widget>3</Masonrygrid::Widget>
+  <Masonrygrid::Widget class="w-2">4</Masonrygrid::Widget>
+  <Masonrygrid::Widget>5</Masonrygrid::Widget>
+  <Masonrygrid::Widget>6</Masonrygrid::Widget>
+  <Masonrygrid::Widget class="w-2 h-2">7</Masonrygrid::Widget>
+  <Masonrygrid::Widget>8</Masonrygrid::Widget>
+</Masonrygrid>

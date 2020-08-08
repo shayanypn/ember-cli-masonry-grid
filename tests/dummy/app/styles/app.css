@@ -1,46 +1,20 @@
-
-
-.piece{
-	background: red;
-	padding: 3px;
-	width: 200px;
+.grid-container {
+  background: #eee;
+  border-radius: 5px;
+  padding: 10px;
 }
-
-.grid-sizer,
-.grid-item{
-	width: 250px;
-	float: left;
+.masonry-widget {
+  background: #dedede;
+  width: 100px;
+  height: 60px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.grid-item{
-	background: green;
-	/*padding: 3px;*/
-	/*width: 200px;*/
-	height: 150px;
+.masonry-widget.w-2 {
+  width: 205px;
 }
-.grid-item-wide{
-	background: yellow;
-	width: 500px;
-	height: 200px;
-	float: left;
-}
-
-.stamp {
-	position: absolute !important;
-	left: 10% !important;
-	top: 20px !important;
-	right: auto  !important;
-	width: 35%;
-	height: 100px;
-	background: orange;
-	border: 4px dotted black;
-}
-.stamp-2 {
-	position: absolute !important;
-	right: 60px !important;
-	top: 10px !important;
-	left: auto !important;
-	width: 100px;
-	height: 70px;
-	background: orange;
-	border: 4px dotted black;
+.masonry-widget.h-2 {
+  height: 125px;
 }

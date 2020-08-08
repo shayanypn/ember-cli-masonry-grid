@@ -1,8 +1,0 @@
-{{#if itemSizer}}
-	<div class={{itemSizer}}></div>
-{{/if}}
-{{#each widgets as |widget index|}}
-	{{#masonry-widget grid=this item=widget }}
-		{{yield widget index this}}
-	{{/masonry-widget}}
-{{/each}}
