@@ -1,19 +1,97 @@
-<h2 id="title">Welcome to Ember</h2>
+
+<div class="container">
+	<div class="row">
+		<div class="col text-center">
+			<div class="jumbotron">
+			  <h1 class="display-4">Ember-cli Masonry grid</h1>
+			  <p class="lead">This ember-cli addon imports the Masonry library and allows you to quickly, easily and powerfully build masonry grid views</p>
+			</div>
+		</div>
+	</div>
+	{{!-- 
+		- - - - - - - - - - - - - - - - - - - - - - - - 
+		- - - - - - - - - - - - - - - - - - - - - - - - 
+							columnWidth
+		- - - - - - - - - - - - - - - - - - - - - - - - 
+		- - - - - - - - - - - - - - - - - - - - - - - - 
+	--}}
+	<div class="row">
+		<div class="col">
+				<h3>
+					columnWidth
+					<a target="_blank" href="https://masonry.desandro.com/options.html#columnwidth">
+						(<span class="lnr lnr-paperclip"></span> <small>masonry doc</small>)
+					</a>
+				</h3>
+				<p>Aligns items to a horizontal grid.</p>
+			<div class="row">
+				<div class="col">
+					<Hbscode @code="@columnWidth=100" />
+					<Csscode />
+				</div>
+				<div class="col">
+					<Masonrygrid
+					  class="grid-container"
+					  @columnWidth=100
+					  @gutter=5
+					>
+					  <Masonrygrid::Widget>1</Masonrygrid::Widget>
+					  <Masonrygrid::Widget class="w-2 h-2">2</Masonrygrid::Widget>
+					  <Masonrygrid::Widget>3</Masonrygrid::Widget>
+					  <Masonrygrid::Widget>4</Masonrygrid::Widget>
+					  <Masonrygrid::Widget>5</Masonrygrid::Widget>
+					  <Masonrygrid::Widget class="w-2">6</Masonrygrid::Widget>
+					  <Masonrygrid::Widget>7</Masonrygrid::Widget>
+					  <Masonrygrid::Widget>8</Masonrygrid::Widget>
+					</Masonrygrid>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<hr>
+		</div>
+	</div>
+	{{!-- 
+		- - - - - - - - - - - - - - - - - - - - - - - - 
+		- - - - - - - - - - - - - - - - - - - - - - - - 
+							columnWidth
+		- - - - - - - - - - - - - - - - - - - - - - - - 
+		- - - - - - - - - - - - - - - - - - - - - - - - 
+	--}}
+	<div class="row">
+		<div class="col">
+			<h3>
+				columnWidth 
+				<a href="https://masonry.desandro.com/options.html#columnwidth">
+					<span class="lnr lnr-paperclip"></span>
+				</a>
+			</h3>
+			<p>Aligns items to a horizontal grid.</p>
+		</div>
+		<div class="col">
+			<Masonrygrid
+			  class="grid-container"
+			  @columnWidth=100
+			  @gutter=5
+			>
+			  <Masonrygrid::Widget>1</Masonrygrid::Widget>
+			  <Masonrygrid::Widget class="w-2 h-2">2</Masonrygrid::Widget>
+			  <Masonrygrid::Widget>3</Masonrygrid::Widget>
+			  <Masonrygrid::Widget>4</Masonrygrid::Widget>
+			  <Masonrygrid::Widget>5</Masonrygrid::Widget>
+			  <Masonrygrid::Widget class="w-2">6</Masonrygrid::Widget>
+			  <Masonrygrid::Widget>7</Masonrygrid::Widget>
+			  <Masonrygrid::Widget>8</Masonrygrid::Widget>
+			</Masonrygrid>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<hr>
+		</div>
+	</div>
+</div>
 
 {{outlet}}
-
-<Masonrygrid
-  class="grid-container"
-  style="width:320px;"
-  @columnWidth=100
-  @gutter=5
->
-  <Masonrygrid::Widget>1</Masonrygrid::Widget>
-  <Masonrygrid::Widget>2</Masonrygrid::Widget>
-  <Masonrygrid::Widget>3</Masonrygrid::Widget>
-  <Masonrygrid::Widget class="w-2">4</Masonrygrid::Widget>
-  <Masonrygrid::Widget>5</Masonrygrid::Widget>
-  <Masonrygrid::Widget>6</Masonrygrid::Widget>
-  <Masonrygrid::Widget class="w-2 h-2">7</Masonrygrid::Widget>
-  <Masonrygrid::Widget>8</Masonrygrid::Widget>
-</Masonrygrid>

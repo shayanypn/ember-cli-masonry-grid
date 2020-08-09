@@ -1,10 +1,21 @@
+code {
+	border-radius: 5px;
+}
+.lnr {
+	font-size: 15px;
+	font-weight: bold;
+}
+h3 a {
+	font-size: 16px;
+}
 .grid-container {
   background: #eee;
   border-radius: 5px;
   padding: 10px;
 }
 .masonry-widget {
-  background: #dedede;
+  background: #0F52BA;
+  color: #fff;
   width: 100px;
   height: 60px;
   margin-bottom: 5px;
