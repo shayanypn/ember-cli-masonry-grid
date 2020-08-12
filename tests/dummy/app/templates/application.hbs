@@ -17,35 +17,34 @@
 	--}}
 	<div class="row">
 		<div class="col">
-				<h3>
-					columnWidth
-					<a target="_blank" href="https://masonry.desandro.com/options.html#columnwidth">
-						(<span class="lnr lnr-paperclip"></span> <small>masonry doc</small>)
-					</a>
-				</h3>
-				<p>Aligns items to a horizontal grid.</p>
-			<div class="row">
-				<div class="col">
-					<Hbscode @code="@columnWidth=100" />
-					<Csscode />
-				</div>
-				<div class="col">
-					<Masonrygrid
-					  class="grid-container"
-					  @columnWidth=100
-					  @gutter=5
-					>
-					  <Masonrygrid::Widget>1</Masonrygrid::Widget>
-					  <Masonrygrid::Widget class="w-2 h-2">2</Masonrygrid::Widget>
-					  <Masonrygrid::Widget>3</Masonrygrid::Widget>
-					  <Masonrygrid::Widget>4</Masonrygrid::Widget>
-					  <Masonrygrid::Widget>5</Masonrygrid::Widget>
-					  <Masonrygrid::Widget class="w-2">6</Masonrygrid::Widget>
-					  <Masonrygrid::Widget>7</Masonrygrid::Widget>
-					  <Masonrygrid::Widget>8</Masonrygrid::Widget>
-					</Masonrygrid>
-				</div>
-			</div>
+			<h3>
+				columnWidth
+				<a target="_blank" href="https://masonry.desandro.com/options.html#columnwidth">
+					(<span class="lnr lnr-paperclip"></span> <small>masonry doc</small>)
+				</a>
+			</h3>
+			<p>Aligns items to a horizontal grid.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<Hbscode @code="@columnWidth=100" />
+			<Csscode />
+		</div>
+		<div class="col">
+			<Masonrygrid
+			  class="grid-container"
+			  @columnWidth=100
+			>
+			  <Masonrygrid::Widget>1</Masonrygrid::Widget>
+			  <Masonrygrid::Widget class="w-2 h-2">2</Masonrygrid::Widget>
+			  <Masonrygrid::Widget>3</Masonrygrid::Widget>
+			  <Masonrygrid::Widget>4</Masonrygrid::Widget>
+			  <Masonrygrid::Widget>5</Masonrygrid::Widget>
+			  <Masonrygrid::Widget class="w-2">6</Masonrygrid::Widget>
+			  <Masonrygrid::Widget>7</Masonrygrid::Widget>
+			  <Masonrygrid::Widget>8</Masonrygrid::Widget>
+			</Masonrygrid>
 		</div>
 	</div>
 	<div class="row">
@@ -56,34 +55,39 @@
 	{{!-- 
 		- - - - - - - - - - - - - - - - - - - - - - - - 
 		- - - - - - - - - - - - - - - - - - - - - - - - 
-							columnWidth
+							gutter
 		- - - - - - - - - - - - - - - - - - - - - - - - 
 		- - - - - - - - - - - - - - - - - - - - - - - - 
 	--}}
 	<div class="row">
 		<div class="col">
 			<h3>
-				columnWidth 
+				gutter 
 				<a href="https://masonry.desandro.com/options.html#columnwidth">
 					<span class="lnr lnr-paperclip"></span>
 				</a>
 			</h3>
-			<p>Aligns items to a horizontal grid.</p>
+			<p>Adds horizontal space between item elements.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<Hbscode @code="@gutter=10" />
 		</div>
 		<div class="col">
 			<Masonrygrid
 			  class="grid-container"
 			  @columnWidth=100
-			  @gutter=5
+			  @gutter=10
 			>
-			  <Masonrygrid::Widget>1</Masonrygrid::Widget>
-			  <Masonrygrid::Widget class="w-2 h-2">2</Masonrygrid::Widget>
-			  <Masonrygrid::Widget>3</Masonrygrid::Widget>
-			  <Masonrygrid::Widget>4</Masonrygrid::Widget>
-			  <Masonrygrid::Widget>5</Masonrygrid::Widget>
-			  <Masonrygrid::Widget class="w-2">6</Masonrygrid::Widget>
-			  <Masonrygrid::Widget>7</Masonrygrid::Widget>
-			  <Masonrygrid::Widget>8</Masonrygrid::Widget>
+			  <Masonrygrid::Widget class="m-10">1</Masonrygrid::Widget>
+			  <Masonrygrid::Widget class="m-10 w-2 h-2">2</Masonrygrid::Widget>
+			  <Masonrygrid::Widget class="m-10">3</Masonrygrid::Widget>
+			  <Masonrygrid::Widget class="m-10">4</Masonrygrid::Widget>
+			  <Masonrygrid::Widget class="m-10">5</Masonrygrid::Widget>
+			  <Masonrygrid::Widget class="m-10 w-2">6</Masonrygrid::Widget>
+			  <Masonrygrid::Widget class="m-10">7</Masonrygrid::Widget>
+			  <Masonrygrid::Widget class="m-10">8</Masonrygrid::Widget>
 			</Masonrygrid>
 		</div>
 	</div>

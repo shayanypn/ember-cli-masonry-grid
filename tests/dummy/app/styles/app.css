@@ -14,18 +14,28 @@ h3 a {
   padding: 10px;
 }
 .masonry-widget {
-  background: #0F52BA;
+  background: #667fba;
+  border: 1px solid #0F52BA;
   color: #fff;
   width: 100px;
   height: 60px;
-  margin-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .masonry-widget.w-2 {
-  width: 205px;
+  width: 200px;
 }
 .masonry-widget.h-2 {
-  height: 125px;
+  height: 120px;
 }
+.masonry-widget.m-10 {
+  margin: 0 0 10px 0 !important;
+}
+.masonry-widget.m-10.w-2 {
+  width: 210px
+}
+.masonry-widget.m-10.h-2 {
+  height: 130px
+}
+
